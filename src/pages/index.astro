@@ -1,8 +1,8 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import BlogFeatured from '../components/BlogFeatured.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import BlogFeatured from "../components/BlogFeatured.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
@@ -13,14 +13,60 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<main>
 			<h1>🧑‍🚀 mark zuppe</h1>
-			<h2>Overview</h2>
 			<p>
-				Seasoned technical product and engineering leader and consultant with over a decade of experience launching innovative products and building teams to command over $1M MRR and 10,000s of DAU. Focused on data-driven approaches to business objectives and giving users delightful experiences.
+				Seasoned technical product and engineering leader and consultant
+				with over a decade of experience launching innovative products
+				and building teams to command over $1M MRR and 10,000s of DAU.
+				Focused on data-driven approaches to business objectives and
+				giving users delightful experiences.
 			</p>
-			<p>I’m a product and engineering consultant who finds the most joy in managing creatives, engineers, and their efforts to build amazing software. Such processes don't occur in a vacuum and as such, I lead with business objectives and user experience. I also strive for rigorous processes that validate and yield deliverables with the lowest possible technical debt.</p>
-			<h2>Read more...</h2>
-			<BlogFeatured />
+			<p>
+				I’m a product and engineering consultant who finds the most joy
+				in managing creatives, engineers, and their efforts to build
+				amazing software. Such processes don't occur in a vacuum and as
+				such, I lead with business objectives and user experience. I
+				also strive for rigorous processes that validate and yield
+				deliverables with the lowest possible technical debt.
+			</p>
+			<section>
+				<h5>Specializing in</h5>
+
+				<p>
+					<div class="tag-container">
+						<div class="tag">AWS</div>
+						<div class="tag">DevOps</div>
+						<div class="tag">Data Architecture</div>
+						<div class="tag">Product</div>
+						<div class="tag">Management</div>
+					</div>
+				</p>
+			</section>
+			<section>
+				<h5>Read more:</h5>
+				<BlogFeatured />
+			</section>
+			<section>
+				<h5>Contact</h5>
+				<p>Text at 000-000-0000</p>
+			</section>
 		</main>
 		<Footer />
-	</body>
+	</body><style>
+		section {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+		.tag {
+			background-color: rgb(var(--gray));
+			border-radius: 0.25rem;
+			padding: 0.25rem 0.5rem;
+			margin-right: 0.5rem;
+			margin-top: 0.5rem;
+		}
+		.tag-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	</style>
 </html>
