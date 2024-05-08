@@ -55,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0rem 0;
+	margin: 1rem 0 1rem 0;
 	color: rgb(var(--gray-light));
 	line-height: 1.2;
 }
@@ -63,28 +63,30 @@ h1 {
 	font-size: 3.052em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.441em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.253em;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.063em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 0.9em;
 }
 strong,
 b {
 	font-weight: 700;
 }
 a {
+	text-decoration: none; /* no underline */
 	color: var(--accent);
 }
 a:hover {
 	color: var(--accent);
 }
 p {
+	margin-top: 1em;
 	margin-bottom: 1em;
 }
 .prose p {
