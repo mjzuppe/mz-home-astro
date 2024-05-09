@@ -10,6 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       # Run your project's build step
+      - name: Install
+        run: npm install
       - name: Build
         run: npm run build
       - name: Publish
