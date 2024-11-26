@@ -2,90 +2,90 @@
 import BaseHead from "../components/BaseHead.astro";
 import BlogFeatured from "../components/BlogFeatured.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const devMode = import.meta.env.DEV;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<script
+		{!devMode && <script
 			defer
 			src="https://workers.markzuppe.com/script.js"
 			data-website-id="cb072e48-8479-46d5-a97e-6e061c5ea4f9"
-		></script></head
+		></script>}
+		</head
 	>
 
 	<body>
 		<main>
-			<h1>🧑‍🚀 mark zuppe</h1>
-			<h2># Fractional CTO / Solutions Architect</h2>
+			<h1>title = "mark zuppe"</h1>
+			<h2>[overview]</h2>
 			<p>
-				I'm a technical product and engineering leader with over 10
-				years of experience launching innovative products and scaling teams from 0 to 100. 
-				I've been a leader at startups and enterprises alike, raised $1M+ from venture capital (including A16 partners), 
-				and have a passion for building products and
-				partnering with companies such as Sony Music, Canon, AWS, and Apple, and 
-				regularly consult with founders regarding product, solutions and architecture, and engineering.
+				Technical product leader and fractional CTO with 10+ years experience with supporting early stage startups and enterprise organizations.
 			</p>
-			<p>
-				My technical expertise as a full-stack developer and solutions architect
-				balances with my customer obsessed and business centric approach. I orchestrate product
-				and platform progress between all parties and I'm typically brought in to early 
-				stage companies to bring order and process to some of the early stage company chaos.
-				With a focus on data-driven approaches to business objectives, I
-				strive to validate, scope, build, and deliver what's impactful to users. 
-				In addition, I have years of experience in building
-                engineering teams including mentoring and navigating through the vast
-				fog through product discovery. If you're looking for a seasoned leader then reach out and let's
-				chat.
-			</p>
+			
 
-			<p>
-				<a href="https://github.com/mjzuppe" target="_blank">
-					<span class="sr-only">Go to Mark's GitHub</span>
-					<svg
-						viewBox="0 0 16 16"
-						aria-hidden="true"
-						width="32"
-						height="32"
-						astro-icon="social/github"
-						><path
-							fill="currentColor"
-							d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-						></path></svg
-					>
-				</a>
-				<a href="https://x.com/mjzuppe">
-					<span class="sr-only">Go to Mark's X</span>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 50 50"
-						width="32px"
-						height="32px"
-						><path
-							fill="currentColor"
-							d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"
-						></path></svg
-					>
-				</a>
-			</p>
+			
 			<section>
-				<h2># Consulting and Fractional Work</h2>
-
+				<h2>[services]</h2>
 				<p>
-					<div class="tag-container">
-						<div class="tag">Product Management</div>
-						<div class="tag">AWS Optimization</div>
-						<div class="tag">Solution Architecture</div>
-						<div class="tag">Engineering Management</div>
-					</div>
+					<ul>
+						<li>Technical Product Management</li>
+						<li>AWS Optimization</li>
+						<li>Full-Stack Development</li>
+						<li>Solution Architecture</li>
+					</ul>
 				</p>
 			</section>
 			<section>
-				<h2># Posts</h2>
+				<h2>[clients/experience]</h2>
+				<p>
+					Apple, Canon, Sony, Bacardi, NYU, Yallhands, Comcast, Ona, Maybelline, and more.
+			</section>
+			<!-- <section>
+				<h2>[built]</h2>
+				<ul>
+					<li>Reqsy</li>
+					<li>Bobber</li>
+					<li>Unum Examen</li>
+				</ul>
+			</section> -->
+			<section>
+				<h2>[posts]</h2>
 				<BlogFeatured />
 			</section>
 		</main>
+		<p>
+			<a href="https://github.com/mjzuppe" target="_blank">
+				<span class="sr-only">Go to Mark's GitHub</span>
+				<svg
+					viewBox="0 0 16 16"
+					aria-hidden="true"
+					width="32"
+					height="32"
+					astro-icon="social/github"
+					><path
+						fill="currentColor"
+						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+					></path></svg
+				>
+			</a>
+			<a href="https://x.com/mjzuppe">
+				<span class="sr-only">Go to Mark's X</span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 50 50"
+					width="32px"
+					height="32px"
+					><path
+						fill="currentColor"
+						d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"
+					></path></svg
+				>
+			</a>
+		</p>
 		<style>
 			section {
 				margin-top: 2rem;
